@@ -73,3 +73,30 @@ python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 streamlit run app.py
+```
+
+
+## Questions & Assumptions
+
+- Question 1: Should chunking be fixed or adaptive based on document structure?  
+  - Assumption: Implemented an adaptive chunking strategy that selects between fixed and dynamic chunking based on document analysis to improve semantic quality.
+
+- Question 2: Is semantic retrieval alone sufficient, or should structured querying also be supported?  
+  - Assumption: Implemented dual storage (Vector DB + SQL) to support both semantic search and structured metadata queries.
+
+- Question 3: How should Arabic text and diacritics be handled?  
+  - Assumption: Added explicit detection and normalization support to ensure accurate semantic representation and retrieval.
+
+- Question 4: Should the system include evaluation metrics?  
+  - Assumption: Implemented a benchmark suite to measure retrieval accuracy, latency, and Arabic support.
+ 
+
+
+## Future Improvements
+
+- Integrate a full LLM-based answer generation layer for more advanced RAG capabilities  
+- Implement hybrid retrieval combining semantic and keyword-based search  
+- Improve Arabic PDF extraction accuracy for complex document formats  
+- Expand the benchmark suite with larger and more diverse datasets  
+- Add support for additional file formats such as HTML and scanned documents  
+- Optimize performance for large-scale document processing  
