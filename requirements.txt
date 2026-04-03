@@ -1,9 +1,10 @@
 streamlit
 sentence-transformers
-faiss-cpu
+chromadb
 numpy
 pandas
 pypdf
 python-docx
 arabic-reshaper
 python-bidi
+torch
