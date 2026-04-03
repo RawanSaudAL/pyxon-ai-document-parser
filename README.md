@@ -1,3 +1,7 @@
+# Pyxon AI Document Parser – Technical Task Submission
+
+---
+
 ## Summary
 This project is an AI-powered document parser designed for Retrieval-Augmented Generation (RAG) workflows. It processes PDF, DOCX, and TXT files, analyzes document structure, automatically selects the optimal chunking strategy, and stores data in both a Vector Database and a SQL Database.
 
@@ -6,13 +10,11 @@ The system supports multilingual content, including Arabic with diacritics, and 
 ---
 
 ## Contact Information
-📧 Email: rawa.431rawan@gmail.com  
-📱 Phone: [Add if you want]  
-
----
-
-## Demo Link
+📧 Email: rawa.431rawan@gmail.com  or rawan.s.alahmadi1@gmail.com
+📱 Phone: 966 553097668  
+## Live Demo
 🔗 https://pyxon-ai-document-parser-ihajbesxfipgncvacu9imr.streamlit.app/
+
 
 ---
 
@@ -30,27 +32,13 @@ The system supports multilingual content, including Arabic with diacritics, and 
 ---
 
 ## Architecture
-The system follows a modular architecture composed of:
+The system follows a modular architecture:
 
-1. **Processing Layer**  
-   Handles file validation, text extraction, and normalization.
-
-2. **Understanding Layer**  
-   Analyzes document structure (headings, paragraphs, patterns, language).
-
-3. **Chunking Layer**  
-   Automatically selects:
-   - Fixed chunking for simple documents  
-   - Dynamic chunking for structured documents  
-
-4. **Storage Layer**  
-   - SQLite for structured metadata  
-   - ChromaDB for semantic vector storage  
-
-5. **Retrieval Layer**  
-   Supports both:
-   - Semantic search using embeddings  
-   - Structured querying via SQL  
+1. Processing Layer → extraction + normalization  
+2. Understanding Layer → structure + language analysis  
+3. Chunking Layer → adaptive (fixed / dynamic)  
+4. Storage Layer → SQLite + ChromaDB  
+5. Retrieval Layer → semantic + structured queries  
 
 ---
 
@@ -78,7 +66,10 @@ The system follows a modular architecture composed of:
 
 ## How to Run
 
-### 1. Clone the repository
 ```bash
 git clone https://github.com/RawanSaudAL/pyxon-ai-document-parser.git
 cd pyxon-ai-document-parser
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
