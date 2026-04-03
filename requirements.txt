@@ -8,3 +8,4 @@ python-docx
 arabic-reshaper
 python-bidi
 torch
+protobuf==3.20.3
